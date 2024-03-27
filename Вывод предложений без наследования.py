@@ -15,6 +15,7 @@ class LeftParagraph:
             self.line += word
 
     def end(self):
+        self.lines.append(self.line)
         print('\n'.join(self.lines))
 
 
@@ -35,6 +36,7 @@ class RightParagraph:
             self.line += word
 
     def end(self):
+        self.lines.append(self.line)
         print('\n'.join(i.rjust(self.width, ' ') for i in self.lines))
 
 

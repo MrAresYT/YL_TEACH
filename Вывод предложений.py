@@ -17,11 +17,13 @@ class Paragraph:
 
 class LeftParagraph(Paragraph):
     def end(self):
+        self.lines.append(self.line)
         print('\n'.join(self.lines))
 
 
 class RightParagraph(Paragraph):
     def end(self):
+        self.lines.append(self.line)
         print('\n'.join(i.rjust(self.width, ' ') for i in self.lines))
 
 
